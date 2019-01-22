@@ -4,6 +4,7 @@ window.onload=function () {
 	var pre=document.getElementById("pre");
 	var ad=document.getElementById("ad1");
 	var autoTimer;
+	var b=true;
 
 	function focus(dis) {
 		var newLeft=pic.offsetLeft+dis;
@@ -24,10 +25,19 @@ window.onload=function () {
 	}
 
 	next.onclick=function () {
-		focus(-1000);
+		if (b){
+			b=false;
+			focus(-1000);
+			b=true;
+		}
+
 	};
 	pre.onclick=function () {
-		focus(1000);
+		if (b){
+			b=false;
+			focus(1000);
+			b=true;
+		}
 	};
 
 	function autoPlay() {
@@ -40,7 +50,13 @@ window.onload=function () {
 		clearInterval(autoTimer);
 	}
 
-	autoPlay();
+	window.onblur=function (){
+		autoStop();
+	}
+
+	window.onfocus=function(){
+		autoPlay();
+	}
 
 	ad.onmouseover=function (){
 		autoStop();
