@@ -40,7 +40,7 @@ window.onload=function () {
 		animated=true;
 		var newLeft=pic.offsetLeft+offset;
 		var time=300;
-		var interval=10;
+		var interval=5;
 		var speed=offset/(time/interval);
 
 		function go() {
