@@ -233,7 +233,7 @@ body{
     float: right;
     line-height: 35px;
     text-decoration: none;
-    color: #999999;
+    color: #999999 !important;
 }
 
 .newsPic{
@@ -248,7 +248,7 @@ body{
 }
 
 .newsPic a,.coursePic a{
-    color: #CC0000;
+    color: #CC0000 !important;
     text-decoration: none;
 }
 
