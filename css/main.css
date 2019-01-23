@@ -178,6 +178,28 @@ body{
     top:155px;
 }
 
+.slide {
+    position: absolute;
+    left: 470px;
+    top: 290px;
+    z-index: 5;
+}
+
+.slide span{
+    display: inline-block;
+    cursor: pointer;
+
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.slide span.on {
+    background-color: white;
+}
+
 .ad:hover .arrow{
     display: block;
 }
